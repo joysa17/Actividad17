@@ -1,17 +1,27 @@
 class Product
- def initialize(name, large, medium, small, xsmall)
+attr_reader :name , :sizes
+ def initialize(name, *sizes)
  @name = name
- @large = large
- @medium = medium
- @small = small
- @xsmall = xsmall
+ @sizes= sizes.map(&:to_i)
  end
+
+ def average
+@sizes.inject(&:+) /sizes.size
 end
+end
+puts "-------------------------------------------------------------"
+
 products_list = []
 data = []
 File.open('catalogo.txt', 'r') { |file| data = file.readlines}
 data.each do |prod|
  ls = prod.split(', ')
- products_list << Product.new(ls[0], ls[1], ls[2], ls[3], ls[4])
+ products_list << Product.new(*ls)
 end
-puts products_list
+print products_list
+
+puts "Promedio por producto-----------------------------------------"
+products_list.each do |product|
+print product.name
+puts product.average
+end
