@@ -6,7 +6,7 @@ attr_reader :name, :sizes
 	 end
 
 	 
-
+end #clase
 #La tienda desea generar un nuevo catálogo que no incluya el último precio
 #correspondiente a cada producto debido a que ya no comercializa productos de talla
 #XS.
@@ -18,15 +18,14 @@ file = File.open('catalogo.txt','r')
 	data.each {|line| catalogo.push(line.split(', ').map(&:chomp))}
 	catalogo.each do |info| 
 	name = info.shift
-	#precio = name(1..3)
+	name2 = info[0..2]
 	
-	puts "#{name} tiene los siguientes valores: "
+	puts "#{name} los valores son: #{name2}"
 
 	file = File.open('nuevo_catalogo.txt','a+')
 
-	file.puts "#{name}: tiene los siguientes valores: "
+	file.puts "#{name} los valores son: #{name2}"
 	file.close	
 	end #do
  
    
-end #clase

@@ -1,5 +1,5 @@
-Polera: tiene los siguientes valores: 
-Jeans: tiene los siguientes valores: 
-Poleron: tiene los siguientes valores: 
-Chaleco: tiene los siguientes valores: 
-Parka: tiene los siguientes valores: 
+Polera los valores son: ["10990", "7990", "4990"]
+Jeans los valores son: ["14990", "10990", "7990"]
+Poleron los valores son: ["12990", "8990", "5990"]
+Chaleco los valores son: ["11990", "8990", "6990"]
+Parka los valores son: ["19990", "14990", "11990"]
